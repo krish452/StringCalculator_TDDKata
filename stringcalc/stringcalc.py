@@ -7,5 +7,7 @@ class StringCalculator:
         if str == "":
             return 0
         else:
-            sum += int(str)
+            for i in str:
+                if i != ',':
+                    sum += int(i)
             return sum
