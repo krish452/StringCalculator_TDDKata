@@ -12,3 +12,7 @@ class TestStringCalculator(unittest.TestCase):
         result = self.StringCal.add("")
         self.assertEqual(0, result)
     
+    def test_string_number_returns_sum(self):
+        result = self.StringCal.add("1")
+        self.assertEqual(1,result)
+    
