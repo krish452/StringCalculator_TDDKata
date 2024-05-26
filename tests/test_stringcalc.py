@@ -35,6 +35,6 @@ class TestStringCalculator(unittest.TestCase):
         result = self.StringCal.add("1\n2,3")
         self.assertEqual(6,result)
 
-    #def test_support_diff_delimiter_return_sum(self):
-        #result = self.StringCal.add("//;\n1;2")
-        #self.assertEqual(3,result)
+    def test_support_diff_delimiter_return_sum(self):
+        result = self.StringCal.add("//;\n1;2")
+        self.assertEqual(3,result)
