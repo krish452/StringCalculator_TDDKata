@@ -30,3 +30,11 @@ class TestStringCalculator(unittest.TestCase):
 
     def test_string_non_numbers_raises_error(self): #If string contains characters
         self.assertRaises(ValueError, self.StringCal.add, "h,j,k,l")
+    
+    def test_handle_newline_retrun_sum(self): #Handle new lines between numbers
+        result = self.StringCal.add("1\n2,3")
+        self.assertEqual(6,result)
+
+    #def test_support_diff_delimiter_return_sum(self):
+        #result = self.StringCal.add("//;\n1;2")
+        #self.assertEqual(3,result)
