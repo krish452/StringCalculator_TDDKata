@@ -61,3 +61,7 @@ class TestStringCalculator(unittest.TestCase):
     def test_two_delimiter_return_result(self):
         result = self.StringCal.add("//[*][%]\n1*2%3")
         self.assertEqual(6,result)
+    
+    def test_two_delimiter_anylength_return_result(self):
+        result = self.StringCal.add("//[**][%%][@@@]\n1**2%%3@@@5")
+        self.assertEqual(11,result)
