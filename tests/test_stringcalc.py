@@ -53,3 +53,7 @@ class TestStringCalculator(unittest.TestCase):
     def test_number_greater_than_thousand_returns_result(self):
         result = self.StringCal.add("2,1000")
         self.assertEqual(2,result)
+
+    def test_delimiter_anylength_return_result(self):
+        result = self.StringCal.add("//[***]\n1***2***3")
+        self.assertEqual(6,result) 
